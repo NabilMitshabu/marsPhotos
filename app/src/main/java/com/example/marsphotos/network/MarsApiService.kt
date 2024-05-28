@@ -19,5 +19,3 @@ object MarsApi {
         retrofit.create(MarsApiService::class.java)
     }
 }
-@GET("photos")
-suspend fun getPhotos(): String

@@ -14,7 +14,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 interface MarsApiService {
     @GET("photos")
-    fun getPhotos(): String
+    suspend fun getPhotos(): List<MarsPhoto>
 }
 object MarsApi {
     val retrofitService : MarsApiService by lazy {

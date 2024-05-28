@@ -15,5 +15,9 @@ interface MarsApiService {
     fun getPhotos(): String
 }
 object MarsApi {
-    val retrofitService : MarsApiService by lazy {}
+    val retrofitService : MarsApiService by lazy {
+        retrofit.create(MarsApiService::class.java)
+    }
 }
+@GET("photos")
+suspend fun getPhotos(): String
